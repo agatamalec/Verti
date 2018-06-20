@@ -1,0 +1,26 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #E4E4E4;
+    color: #444444;
+}
+
+.container {
+    $columnNum: 12;
+    display: flex;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    @for $i from 1 through $columnNum {
+        .col-#{$i} {
+            width: (100%/$columnNum * $i );
+        }
+    }
+}
